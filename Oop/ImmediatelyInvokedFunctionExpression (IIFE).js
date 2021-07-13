@@ -7,3 +7,11 @@
 (function () {
   console.log("A cozy nest is ready");
 })();
+
+//tests
+/*
+The function should be anonymous.
+
+Passed
+Your function should have parentheses at the end of the expression to call it immediately.
+*/

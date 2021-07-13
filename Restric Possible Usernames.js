@@ -147,7 +147,7 @@ Remember to use \s after Oh{3,6} to include a white space, followed by no to pas
 
 //challenge
 /*Change the regex haRegex to match the word Hazzah only when it has four or more letter z's. */
-et haStr = "Hazzzzah";
+let haStr = "Hazzzzah";
 let haRegex = /Haz{4,}ah/i; // Change this line
 let result = haRegex.test(haStr);
 

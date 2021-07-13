@@ -40,7 +40,7 @@ console.log(myNestedArray[2][5][1][1]);
 
 //tests
 
-/*
+/*j
 myNestedArray should contain only numbers, booleans, and strings as data elements
 
 Passed
