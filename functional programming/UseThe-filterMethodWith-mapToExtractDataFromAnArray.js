@@ -1,11 +1,6 @@
-//map function
+//Use the filter Method With map to Extract Data from an Array
 
-
-
-// challenge
-/*
-The watchList array holds objects with information on several movies. Use map on watchList to assign a new array of objects to the ratings variable. Each movie in the new array should have only a title key with the name of the film, and a rating key with the IMDB rating. The code in the editor currently uses a for loop to do this, so you should replace the loop functionality with your map expression.
-*/
+/*The variable watchList holds an array of objects with information on several movies. Use a combination of filter and map on watchList to assign a new array of objects with only title and rating keys. The new array should only include objects where imdbRating is greater than or equal to 8.0. Note that the rating values are saved as strings in the object and you may need to convert them into numbers to perform mathematical operations on them*/
 
 const watchList = [
   {
@@ -119,19 +114,18 @@ const watchList = [
     "Response": "True"
   }
 ];
+const filteredList = watchList.map(function(item){ 
+  return {title : item["Title"], rating : item["imdbRating"]}
+})
+.filter(item => item.rating >= 8);
 
-const ratings = watchList.map(({Title: Title, imdbRating: Rating}) => ({Title, Rating}));
-console.log(ratings)
+console.log(filteredList);
 
-//test
-/*
-The watchList variable should not change.
 
-Passed
-Your code should not use a for loop.
 
-Passed
-Your code should use the map method.
 
-ratings should equal [{"title":"Inception","rating":"8.8"},{"title":"Interstellar","rating":"8.6"},{"title":"The Dark Knight","rating":"9.0"},{"title":"Batman Begins","rating":"8.3"},{"title":"Avatar","rating":"7.9"}].
-*/
+
+
+
+
+

@@ -1,12 +1,5 @@
-//map function
 
-
-
-// challenge
-/*
-The watchList array holds objects with information on several movies. Use map on watchList to assign a new array of objects to the ratings variable. Each movie in the new array should have only a title key with the name of the film, and a rating key with the IMDB rating. The code in the editor currently uses a for loop to do this, so you should replace the loop functionality with your map expression.
-*/
-
+// for loop for functional programming
 const watchList = [
   {
     "Title": "Inception",
@@ -102,6 +95,7 @@ const watchList = [
     "Rated": "PG-13",
     "Released": "18 Dec 2009",
     "Runtime": "162 min",
+    
     "Genre": "Action, Adventure, Fantasy",
     "Director": "James Cameron",
     "Writer": "James Cameron",
@@ -119,19 +113,8 @@ const watchList = [
     "Response": "True"
   }
 ];
-
-const ratings = watchList.map(({Title: Title, imdbRating: Rating}) => ({Title, Rating}));
-console.log(ratings)
-
-//test
-/*
-The watchList variable should not change.
-
-Passed
-Your code should not use a for loop.
-
-Passed
-Your code should use the map method.
-
-ratings should equal [{"title":"Inception","rating":"8.8"},{"title":"Interstellar","rating":"8.6"},{"title":"The Dark Knight","rating":"9.0"},{"title":"Batman Begins","rating":"8.3"},{"title":"Avatar","rating":"7.9"}].
-*/
+const  ratings = [];
+for(let i = 0; i < watchList.length; i++){
+  ratings.push({Title :watchList[i]["Title"], Ratings : watchList[i]["imdbRating"]});
+}
+console.log(ratings);
